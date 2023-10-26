@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator using html,css and js</title>
+    <link rel="stylesheet" href="./calcStyle.css">
+   
+</head>
+<body>
+    <div class="container">
+
+        <div class="calculator">
+            <form>
+                <div class="display">
+                    <input placeholder="0" type="text" id="result" readonly>
+                </div>
+                
+                <div>
+                    <input type="button" onclick="display('7')" value="7">
+                    <input type="button" value="8" onclick="result.value += '8'">
+                    <input type="button" value="9" onclick="result.value += '9'">
+                    <input type="button" value="*" onclick="result.value += '*'">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="result.value += '4'">
+                    <input type="button" value="5" onclick="result.value += '5'">
+                    <input type="button" value="6" onclick="result.value += '6'">
+                    <input type="button" value="-" onclick="result.value += '-'">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="result.value += '1'">
+                    <input type="button" value="2" onclick="result.value += '2'">
+                    <input type="button" value="3" onclick="result.value += '3'">
+                    <input type="button" value="+" onclick="result.value += '+'">
+                </div>
+                <div>
+                    <input type="button" value="AC" onclick="result.value = ''">
+                    <input type="button" value="0" onclick="result.value += '0'">
+                    <input type="button" value="/" onclick="result.value += '/'">
+                    <input type="button" value="=" onclick="result.value = eval(result.value)">
+                </div>
+                <div>
+                    <input type="button" value="DE" onclick="result.value = result.value.toString().slice(0,-1)">
+                </div>
+            </form>
+        </div>
+
+    </div>
+</body>
+
+<script src="./calc.js"></script>
+</html>
+
